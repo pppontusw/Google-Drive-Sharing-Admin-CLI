@@ -1,0 +1,10 @@
+/flask_session
+/lib
+/include
+/bin
+/local
+/share
+config.ini
+config.py
+*.json
+*.pyc
