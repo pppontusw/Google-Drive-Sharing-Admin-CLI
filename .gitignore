@@ -8,3 +8,4 @@ config.ini
 config.py
 *.json
 *.pyc
+*.log

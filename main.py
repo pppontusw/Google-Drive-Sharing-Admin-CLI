@@ -186,7 +186,8 @@ def printInsertResults(successarray, failarray):
 	if failarray:
 		logger.info('======FAILED======')
 		for item in failarray:
-			logger.info('Failed to add %s to %s' % (item['moduser'], item['title']))
+			logger.warning('Failed to add %s to %s' % (item['moduser'], item['title']))
+			logger.info('Error: %s' % item['message'])
 	return None
 
 
@@ -198,7 +199,8 @@ def printDeleteResults(successarray, failarray):
 	if failarray:
 		logger.info('======FAILED======')
 		for item in failarray:
-			logger.info('Failed to remove %s from %s' % (item['moduser'], item['title']))
+			logger.warning('Failed to remove %s from %s' % (item['moduser'], item['title']))
+			logger.info('Error: %s' % item['message'])
 	return None
 
 def authenticate(user):
