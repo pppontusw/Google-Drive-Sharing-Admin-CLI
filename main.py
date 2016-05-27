@@ -214,11 +214,15 @@ def authenticate(user):
 
 def buildItems(info):
 	itemarray = []
-	infolist = info['items']
-	for item in infolist:
-		itemobj = { 'title': item['title'], 'id': item['id'] }
-		itemarray.append(itemobj)
-	return itemarray
+	try:
+		infolist = info['items']
+		for item in infolist:
+			itemobj = { 'title': item['title'], 'id': item['id'] }
+			itemarray.append(itemobj)
+		return itemarray
+	except KeyError:
+		logging.warning('Something wen\'t wrong when fetching items: %s ' % infolist)
+		return None
 
 
 def makeQuery(drivesearchquery, user, token):
