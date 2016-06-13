@@ -221,7 +221,10 @@ def buildItems(info):
 			itemarray.append(itemobj)
 		return itemarray
 	except KeyError:
-		logging.warning('Something wen\'t wrong when fetching items: %s ' % infolist)
+		try:
+			logging.warning('Something wen\'t wrong when fetching items: %s ' % infolist)
+		except UnboundLocalError:
+			logging.warning('Something wen\'t wrong when fetching items, info seems to be empty.'
 		return None
 
 
