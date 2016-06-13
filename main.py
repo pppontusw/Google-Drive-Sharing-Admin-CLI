@@ -223,9 +223,10 @@ def buildItems(info):
 	except KeyError:
 		try:
 			logging.warning('Something wen\'t wrong when fetching items: %s ' % infolist)
+			return None
 		except UnboundLocalError:
 			logging.warning('Something wen\'t wrong when fetching items, info seems to be empty.'
-		return None
+			return None
 
 
 def makeQuery(drivesearchquery, user, token):
