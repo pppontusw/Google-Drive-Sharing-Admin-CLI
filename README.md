@@ -7,7 +7,6 @@ Search and replace Google Drive permissions across your entire Google Apps domai
 ```
 httplib2==0.9.2
 oauth2client==2.1.0
-pkg-resources==0.0.0
 pyasn1==0.1.9
 pyasn1-modules==0.0.8
 rsa==3.4.2
